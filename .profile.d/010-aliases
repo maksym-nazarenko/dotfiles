@@ -1,0 +1,1 @@
+alias maks-ssh-pubkey-copy='cat ~/.ssh/id_rsa.pub| pbcopy'

@@ -1,0 +1,2 @@
+alias ls='LSCOLORS="exfxcxdxcxegedabagacad" ls -G'
+alias grep='grep --color=auto'

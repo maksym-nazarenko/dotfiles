@@ -1,0 +1,10 @@
+# set PATH so it includes user's private bin if one exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/opt/bin" ]; then
+    PATH="$HOME/opt/bin:$PATH"
+fi
+
+export PATH
