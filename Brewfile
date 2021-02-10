@@ -1,0 +1,12 @@
+brew "bash-completion"
+brew "bash-git-prompt"
+brew "colordiff"
+brew "emacs"
+brew "fish"
+brew "gh"
+brew "go"
+brew "jq"
+brew "watch"
+brew "wget"
+
+cask "font-droid-sans-mono-for-powerline"
