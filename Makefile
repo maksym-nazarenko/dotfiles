@@ -31,9 +31,13 @@ configure/git:
 .PHONY: configure/git
 
 configure/bash:
-	$(INSTALL_SYMLINK) $(ROOT_DIR)/.profile $$HOME/.profile
-	$(INSTALL_SYMLINK) $(ROOT_DIR)/.profile.d $$HOME/.profile.d
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/bash/.profile $$HOME/.profile
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/bash/.profile.d $$HOME/.profile.d
 .PHONY: configure/bash
 
-configure: configure/brew configure/bash configure/git configure/vscode
+configure/fish:
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/fish/maks.fish $$HOME/.config/fish/conf.d/maks.fish
+.PHONY: configure/fish
+
+configure: configure/brew configure/bash configure/fish configure/git configure/vscode
 .PHONY: configure
