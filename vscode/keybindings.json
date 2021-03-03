@@ -9,29 +9,12 @@
         "command": "workbench.action.gotoLine"
     },
     {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
-    },
-    {
         "key": "cmd+[",
         "command": "workbench.action.navigateBack"
     },
     {
-        "key": "ctrl+-",
-        "command": "-workbench.action.navigateBack"
-    },
-    {
         "key": "cmd+]",
         "command": "workbench.action.navigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward"
-    },
-    {
-        "key": "cmd+]",
-        "command": "-editor.action.indentLines",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "cmd+alt+t",
@@ -43,16 +26,8 @@
         "command": "workbench.action.nextEditor"
     },
     {
-        "key": "shift+cmd+]",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
         "key": "ctrl+left",
         "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "shift+cmd+[",
-        "command": "-workbench.action.previousEditor"
     },
     {
         "key": "alt+cmd+m",
@@ -71,26 +46,12 @@
         "command": "git.revertSelectedRanges"
     },
     {
-        "key": "cmd+k",
-        "command": "-git.commitAll",
-        "when": "!inDebugMode && !terminalFocus"
-    },
-    {
-        "key": "cmd+\\",
-        "command": "-workbench.action.toggleSidebarVisibility"
-    },
-    {
         "key": "alt+a",
         "command": "explorer.newFile"
     },
     {
         "key": "shift+alt+a",
         "command": "explorer.newFolder"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "alt+3",
@@ -109,23 +70,9 @@
         "command": "workbench.action.editorLayoutTwoColumnsBottom"
     },
     {
-        "key": "ctrl+cmd+down",
-        "command": "-notebook.cell.focusInOutput",
-        "when": "notebookCellHasOutputs && notebookEditorFocused"
-    },
-    {
-        "key": "ctrl+cmd+down",
-        "command": "-notebook.focusNextEditor",
-        "when": "notebookEditorFocused && notebookOutputFocused"
-    },
-    {
         "key": "ctrl+r",
         "command": "workbench.action.tasks.reRunTask",
         "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.tasks.reRunTask"
     },
     {
         "key": "alt+r",

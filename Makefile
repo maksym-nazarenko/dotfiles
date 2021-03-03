@@ -9,20 +9,16 @@ configure/brew:
 
 configure/vscode:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/vscode/settings.json $$HOME/Library/Application\ Support/Code/User/settings.json
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/vscode/keybindings.json $$HOME/Library/Application\ Support/Code/User/keybindings.json
 	code --install-extension \
-		aws-scripting-guy.cform \
 		eamodio.gitlens \
 		golang.go \
 		hashicorp.terraform \
 		IBM.output-colorizer \
-		ivory-lab.jenkinsfile-support \
 		k--kato.intellij-idea-keybindings \
-		marcostazi.VS-code-vagrantfile \
-		ms-azuretools.vscode-docker \
+		mongodb.mongodb-vscode \
 		redhat.vscode-yaml \
-		ryu1kn.partial-diff \
-		wholroyd.HCL \
-		wholroyd.jinja
+		ryu1kn.partial-diff
 
 .PHONY: configure/vscode
 

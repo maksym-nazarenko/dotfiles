@@ -61,7 +61,6 @@
         "yml"
     ],
     "go.autocompleteUnimportedPackages": true,
-    "editor.minimap.enabled": false,
     "terminal.integrated.fontSize": 14,
     "gitlens.advanced.telemetry.enabled": false,
     "gitlens.blame.format": "[${author}] ${date|25} ${message|30?}",
@@ -88,5 +87,7 @@
         "--fast"
     ],
     "explorer.confirmDelete": false,
-    "go.useLanguageServer": false
+    "go.useLanguageServer": false,
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false
 }
