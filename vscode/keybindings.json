@@ -82,4 +82,9 @@
         "key": "shift+alt+enter",
         "command": "workbench.action.toggleEditorWidths"
     },
+    {
+        "key": "cmd+k",
+        "command": "-git.commitAll",
+        "when": "!inDebugMode && !terminalFocus"
+    },
 ]

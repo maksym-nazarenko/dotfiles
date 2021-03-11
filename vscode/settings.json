@@ -83,11 +83,11 @@
     ],
     "editor.fontSize": 16,
     "go.lintTool": "golangci-lint",
-    "go.lintFlags": [
-        "--fast"
-    ],
     "explorer.confirmDelete": false,
-    "go.useLanguageServer": false,
+    "go.useLanguageServer": true,
     "workbench.sideBar.location": "right",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+    "editor.selectionHighlightBackground": "#0d8080"
+    }
 }
