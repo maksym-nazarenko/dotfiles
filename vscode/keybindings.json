@@ -87,4 +87,16 @@
         "command": "-git.commitAll",
         "when": "!inDebugMode && !terminalFocus"
     },
+    {
+        "key": "home",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {"text": "\u0001"},
+    },
+    {
+        "key": "end",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {"text": "\u0005"},
+    },
 ]
