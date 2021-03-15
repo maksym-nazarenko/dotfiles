@@ -99,4 +99,93 @@
         "when": "terminalFocus",
         "args": {"text": "\u0005"},
     },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup",
+    },
+    {
+        "key": "cmd+9",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+numpad9",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus && !inDebugRepl && !problemFocus && !terminalFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+numpad1",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "cmd+numpad3",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+numpad5",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+    },
+    {
+        "key": "cmd+9",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "cmd+9",
+        "command": "-workbench.view.scm",
+        "when": "editorFocus && workbench.scm.active"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.view.explorer",
+        "when": "editorFocus && viewContainer.workbench.view.explorer.enabled"
+    },
 ]
