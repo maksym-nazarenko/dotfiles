@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+
 set -g theme_display_date no
 set -g theme_display_git_default_branch yes
 set -g theme_display_cmd_duration yes
