@@ -1,1 +1,4 @@
 alias maks-ssh-pubkey-copy='cat ~/.ssh/id_rsa.pub| pbcopy'
+
+alias doco='docker-compose'
+alias g='git'

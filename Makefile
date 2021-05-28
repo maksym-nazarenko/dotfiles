@@ -40,6 +40,13 @@ configure/zsh:
 .PHONY: configure/zsh
 
 configure/fish:
+	@mkdir $$HOME/.fonts
+	@curl https://github.com/powerline/fonts/blob/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
+
+	@mkdir -p $$HOME/.config/fish/conf.d
+	@git clone https://github.com/oh-my-fish/oh-my-fish $$HOME/.oh-my-fish
+	@$$HOME/.oh-my-fish/bin/install --offline
+	@omf install bobthefish
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/fish/maks.fish $$HOME/.config/fish/conf.d/maks.fish
 .PHONY: configure/fish
 
