@@ -41,7 +41,7 @@ configure/zsh:
 
 configure/fish:
 	@mkdir $$HOME/.fonts
-	@curl https://github.com/powerline/fonts/blob/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
+	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
 
 	@mkdir -p $$HOME/.config/fish/conf.d
 	@git clone https://github.com/oh-my-fish/oh-my-fish $$HOME/.oh-my-fish
