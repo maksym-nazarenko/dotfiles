@@ -10,7 +10,7 @@
     "files.trimFinalNewlines": true,
     "editor.multiCursorModifier": "alt",
     "editor.formatOnPaste": false,
-    "window.title": "${activeEditorShort}${dirty}${separator}${rootName}${separator}${activeEditorLong}",
+    "window.title": "${activeEditorMedium}${dirty}${separator}${rootName}",
     "explorer.confirmDragAndDrop": false,
     "symbolOutline.doSort": true,
     "files.associations": {
@@ -61,7 +61,7 @@
         "yml"
     ],
     "go.autocompleteUnimportedPackages": true,
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 16,
     "gitlens.advanced.telemetry.enabled": false,
     "gitlens.blame.format": "[${author}] ${date|25} ${message|30?}",
     "gitlens.currentLine.format": "${author}, ${date} • ${message}",
@@ -89,5 +89,12 @@
     "editor.minimap.enabled": false,
     "workbench.colorCustomizations": {
     "editor.selectionHighlightBackground": "#0d8080"
-    }
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.integrated.tabs.enabled": true,
 }
