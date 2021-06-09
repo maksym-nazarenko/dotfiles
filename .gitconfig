@@ -1,18 +1,22 @@
 [user]
-	name = Maksym Nazarenko
-	email = maks.nazarenko@gmail.com
+	name       = Maksym Nazarenko
+	email      = maks.nazarenko@gmail.com
+	signingKey = C71713AA64FA63FC
 
 [color]
   ui = true
+
 [push]
 	default = nothing
+
 [alias]
-  ds = diff --staged
+  ds   = diff --staged
   glog = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(green)%d%C(reset) %C(dim bold cyan)[%cn,%aI]%C(reset)'
-  ls = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(green)%d%C(reset)%C(dim bold cyan) [%cn,%aI]%C(reset)'
-  ll = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(green)%d%C(reset) %C(dim bold cyan)[%cn,%aI]%C(reset)' --numstat
-  dlog  = log --decorate
-  st = status -s -b
+  ls   = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(green)%d%C(reset)%C(dim bold cyan) [%cn,%aI]%C(reset)'
+  ll   = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(green)%d%C(reset) %C(dim bold cyan)[%cn,%aI]%C(reset)' --numstat
+  dlog = log --decorate
+  st   = status -s -b
+
 [pull]
 	ff = only
 
