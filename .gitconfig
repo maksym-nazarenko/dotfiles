@@ -3,6 +3,9 @@
 	email      = maks.nazarenko@gmail.com
 	signingKey = C71713AA64FA63FC
 
+[commit]
+  gpgsign = true
+
 [color]
   ui = true
 
