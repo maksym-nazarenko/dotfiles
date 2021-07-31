@@ -13,3 +13,5 @@ if [ -r ~/.zsh/git-prompt.sh ]; then
     setopt PROMPT_SUBST
     export PS1='%F{yellow}%3~%f$(__git_ps1 " [%s]") '$'\n> '
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
