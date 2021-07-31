@@ -50,5 +50,9 @@ configure/fish:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/fish/maks.fish $$HOME/.config/fish/conf.d/maks.fish
 .PHONY: configure/fish
 
+configure/tmux:
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/tmux.conf $$HOME/.tmux.conf
+.PHONY: configure/tmux
+
 configure: configure/brew configure/bash configure/fish configure/git configure/vscode
 .PHONY: configure
