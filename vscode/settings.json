@@ -16,7 +16,8 @@
     "files.associations": {
         "*.js.j2": "javascript",
         "Dockerfile*": "dockerfile",
-        "Jenkinsfile": "groovy"
+        "Jenkinsfile": "groovy",
+        "*.tf": "terraform"
     },
     "partialDiff.enableTelemetry": false,
     "terminal.integrated.scrollback": 10000,
@@ -86,15 +87,38 @@
     "explorer.confirmDelete": false,
     "go.useLanguageServer": true,
     "workbench.sideBar.location": "right",
-    "editor.minimap.enabled": false,
     "workbench.colorCustomizations": {
     "editor.selectionHighlightBackground": "#0d8080"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "terminal.integrated.tabs.enabled": true,
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "[terraform]": {
+        "editor.formatOnSave": true,
+    },
+    "[terraform-vars]": {
+        "editor.formatOnSave": true,
+    },
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
 }
