@@ -19,6 +19,7 @@
   ll   = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(green)%d%C(reset) %C(dim bold cyan)[%cn,%aI]%C(reset)' --numstat
   dlog = log --decorate
   st   = status -s -b
+  rpo  = remote prune origin
 
 [pull]
 	ff = only
