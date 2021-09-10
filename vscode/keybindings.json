@@ -272,4 +272,18 @@
         "command": "-workbench.action.terminal.resizePaneDown",
         "when": "terminalFocus && terminalProcessSupported"
     },
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.saveAll"
+    },
+    {
+        "key": "alt+cmd+h",
+        "command": "references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider"
+    },
 ]
