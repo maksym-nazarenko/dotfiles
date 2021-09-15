@@ -286,4 +286,8 @@
         "command": "-references-view.showCallHierarchy",
         "when": "editorHasCallHierarchyProvider"
     },
+    {
+        "key": "cmd+[IntlBackslash]",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
 ]
