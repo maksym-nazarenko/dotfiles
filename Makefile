@@ -55,5 +55,9 @@ configure/tmux:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/tmux.conf $$HOME/.tmux.conf
 .PHONY: configure/tmux
 
+configure/gpg:
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/gpg/gpg-agent.conf $$HOME/.gnupg/gpg-agent.conf
+.PHONY: configure/gpg
+
 configure: configure/brew configure/bash configure/fish configure/git configure/vscode
 .PHONY: configure
