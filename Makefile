@@ -22,7 +22,7 @@ configure/vscode:
 
 .PHONY: configure/vscode
 
-configure/git:
+configure/git: configure/gpg
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/.gitconfig $$HOME/.gitconfig
 .PHONY: configure/git
 
