@@ -52,6 +52,7 @@ configure/fish:
 .PHONY: configure/fish
 
 configure/tmux:
+	pip3 install --user powerline-status
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/tmux.conf $$HOME/.tmux.conf
 .PHONY: configure/tmux
 
