@@ -125,4 +125,5 @@
     },
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "go.toolsManagement.autoUpdate": true,
 }
