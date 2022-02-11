@@ -15,7 +15,6 @@ configure/vscode:
 		golang.go \
 		hashicorp.terraform \
 		IBM.output-colorizer \
-		k--kato.intellij-idea-keybindings \
 		mongodb.mongodb-vscode \
 		redhat.vscode-yaml \
 		ryu1kn.partial-diff
