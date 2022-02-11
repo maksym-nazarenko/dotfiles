@@ -86,13 +86,17 @@
         "key": "home",
         "command": "workbench.action.terminal.sendSequence",
         "when": "terminalFocus",
-        "args": {"text": "\u0001"},
+        "args": {
+            "text": "\u0001"
+        },
     },
     {
         "key": "end",
         "command": "workbench.action.terminal.sendSequence",
         "when": "terminalFocus",
-        "args": {"text": "\u0005"},
+        "args": {
+            "text": "\u0005"
+        },
     },
     {
         "key": "cmd+2",
@@ -161,19 +165,23 @@
         "key": "shift+cmd+o",
         "command": "workbench.action.quickOpen",
         "when": "editorTextFocus"
-    },{
+    },
+    {
         "key": "cmd+f12",
         "command": "workbench.action.gotoSymbol",
         "when": "editorTextFocus"
-    },{
+    },
+    {
         "key": "shift+cmd+u",
         "command": "workbench.panel.output.focus",
         "when": "!workbench.panel.output.active"
-    },{
+    },
+    {
         "key": "alt+f12",
         "command": "terminal.focus",
         "when": "!terminalEditorFocus"
-    },{
+    },
+    {
         "key": "cmd+[IntlBackslash]",
         "command": "workbench.action.focusActiveEditorGroup"
     },
@@ -205,12 +213,44 @@
         "key": "cmd+backspace",
         "command": "editor.action.deleteLines",
         "when": "editorTextFocus && !editorReadonly"
-    },{
+    },
+    {
         "key": "ctrl+j",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
-    },{
+    },
+    {
         "key": "cmd+e",
         "command": "workbench.action.openRecent",
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+f2",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt-f2",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
     }
 ]
