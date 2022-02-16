@@ -252,5 +252,34 @@
         "key": "alt-f2",
         "command": "editor.action.marker.nextInFiles",
         "when": "editorFocus"
+    },
+    {
+        "key": "cmd+-",
+        "command": "editor.fold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+=",
+        "command": "editor.unfold",
+        "when": "editorTextFocus"
+    },{
+        "key": "alt+tab",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorTextFocus"
     }
+    ,{
+        "key": "cmd+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorTextFocus"
+    }
+    ,{
+        "key": "shift+f6",
+        "command": "editor.action.rename",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f6",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      }
 ]
