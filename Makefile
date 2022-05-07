@@ -32,6 +32,7 @@ configure/bash:
 
 configure/zsh:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc $$HOME/.zshrc
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc.d $$HOME/.zshrc.d
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zsh $$HOME/.zsh
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh

@@ -20,3 +20,7 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 /usr/bin/which -s aws_completer && complete -C $(which aws_completer) aws
+
+[ -d ~/.zshrc.d ] && source ~/.zshrc.d/*
+
+[ -r ~/.zshrc.local ] && source ~/.zshrc.local
