@@ -305,7 +305,7 @@
     },
     {
         "key": "shift+cmd+f12",
-        "command": "editor.action.peekImplementation",
+        "command": "editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     }
 ]
