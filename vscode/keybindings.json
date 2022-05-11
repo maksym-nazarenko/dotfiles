@@ -262,17 +262,18 @@
         "key": "cmd+=",
         "command": "editor.unfold",
         "when": "editorTextFocus"
-    },{
+    },
+    {
         "key": "alt+tab",
         "command": "workbench.action.focusPreviousGroup",
         "when": "editorTextFocus"
-    }
-    ,{
+    },
+    {
         "key": "cmd+p",
         "command": "editor.action.triggerParameterHints",
         "when": "editorTextFocus"
-    }
-    ,{
+    },
+    {
         "key": "shift+f6",
         "command": "editor.action.rename",
         "when": "editorTextFocus"
@@ -281,5 +282,30 @@
         "key": "shift+f6",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-      }
+    },
+    {
+        "key": "cmd+7",
+        "command": "outline.focus",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+-",
+        "command": "list.collapseAll",
+        "when": "listFocus"
+    },
+    {
+        "key": "cmd+=",
+        "command": "list.expand",
+        "when": "listFocus"
+    },
+    {
+        "key": "cmd+; c",
+        "command": "go.test.cursorOrPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+f12",
+        "command": "editor.action.peekImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    }
 ]
