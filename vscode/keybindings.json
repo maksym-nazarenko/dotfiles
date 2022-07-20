@@ -192,8 +192,13 @@
     },
     {
         "key": "alt+j",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
         "key": "cmd+d",

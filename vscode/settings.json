@@ -125,4 +125,6 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "go.toolsManagement.autoUpdate": true,
+    "git.mergeEditor": true,
+    "window.commandCenter": true
 }
