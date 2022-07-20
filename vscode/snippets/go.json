@@ -1,0 +1,144 @@
+{
+	// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Test function": {
+		"prefix": "testFunc",
+		"body": [
+			"func Test$1(t *testing.T){",
+			"testCases := []struct {",
+			"    name           string",
+			"    expectedResult bool",
+			"    $2",
+			"}{",
+			"    {",
+			"        name:           \"test $1\",",
+			"        expectedResult: true,",
+			"    },",
+			"}",
+			"for _, tc := range testCases {",
+			"    t.Run(tc.name, func(t *testing.T) {",
+			"        $0",
+			"    })",
+			"}",
+			"}"
+		],
+		"description": "Test function"
+	},
+
+	"Table driven test": {
+		"prefix": "testTableDrivenBody",
+		"body": [
+			"testCases := []struct {",
+			"    name           string",
+			"    expectedResult bool",
+			"    $2",
+			"}{",
+			"    {",
+			"        name:           \"test $1\",",
+			"        expectedResult: true,",
+			"    },",
+			"}",
+			"for _, tc := range testCases {",
+			"    t.Run(tc.name, func(t *testing.T) {",
+			"        $0",
+			"    })",
+			"}",
+		],
+		"description": "Table driven test body"
+	},
+
+	"Terraform acceptance test": {
+	"description": "",
+	"prefix": "tfacc",
+	"body": [
+		"func Test$1_basic(t *testing.T) {",
+		"",
+		"resourceName := \"resource.testacc\"",
+		"",
+		"resource.ParallelTest(t, resource.TestCase{",
+		"    // PreCheck:          func() { testAccPreCheck(t) },",
+		"    ProviderFactories: testAccProviderFactories,",
+		"    CheckDestroy:      testAccCheck$1Destroy,",
+		"    Steps: []resource.TestStep{",
+		"        {",
+		"            Config: testAcc$1(),",
+		"            Check: resource.ComposeAggregateTestCheckFunc(",
+		"                testAcc$1Exists(resourceName),",
+		"                // resource.TestCheckResourceAttrSet(resourceName, \"id\"),",
+		"            ),",
+		"        },",
+		"    },",
+		"})",
+		"}",
+		"",
+		"func testAcc$1Exists() string {",
+		"return fmt.Sprintf(`",
+		"resource $1 \"testacc\" {",
+		"}",
+		"`)",
+		"}",
+		"",
+		"func testAcc$1() string {",
+		"return fmt.Sprintf(`",
+		"resource $1 \"testacc\" {",
+		"}",
+		"`)",
+		"}"
+	]
+	},
+	"Terraform resource": {
+		"description": "Terraform resource template",
+		"prefix": "tfresource",
+		"body": [
+			"func resource$1() *schema.Resource {",
+			"    return &schema.Resource{",
+			"        CreateContext: create$1,",
+			"        ReadContext:   read$1,",
+			"        UpdateContext: update$1,",
+			"        DeleteContext: delete$1,",
+			"        Schema: map[string]*schema.Schema{",
+			"            \"id\": {",
+			"                Type:     schema.TypeString,",
+			"                Computed: true,",
+			"            },",
+			"        },",
+			"    }",
+			"}",
+			"",
+			"func create$1(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {",
+			"    // d.SetId(r.id)",
+			"",
+			"    return read$1(ctx, d, m)",
+			"}",
+			"",
+			"func read$1(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {",
+			"    var diags diag.Diagnostics",
+			"",
+			"    return diags",
+			"}",
+			"",
+			"func update$1(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {",
+			"    var diags diag.Diagnostics",
+			"",
+			"    return diags",
+			"}",
+			"",
+			"func delete$1(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {",
+			"    var diags diag.Diagnostics",
+			"",
+			"    return diags",
+			"}",
+		]
+	}
+}

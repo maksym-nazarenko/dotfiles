@@ -8,8 +8,10 @@ configure/brew:
 .PHONY: configure/brew
 
 configure/vscode:
+	mkdir -p $$HOME/Library/Application\ Support/Code/User/snippets
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/vscode/settings.json $$HOME/Library/Application\ Support/Code/User/settings.json
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/vscode/keybindings.json $$HOME/Library/Application\ Support/Code/User/keybindings.json
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/vscode/snippets/go.json $$HOME/Library/Application\ Support/Code/User/snippets/go.json
 	code --install-extension \
 		eamodio.gitlens \
 		golang.go \
