@@ -77,7 +77,7 @@
     "gitlens.codeLens.authors.enabled": true,
     "gitlens.currentLine.enabled": false,
     "workbench.tree.indent": 16,
-    "terminal.integrated.cwd": "${workspaceFolder}/${relativeFileDirname}",
+    "terminal.integrated.cwd": "${workspaceFolder}",
     "cSpell.userWords": [
         "nazarenko"
     ],
@@ -125,6 +125,6 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "go.toolsManagement.autoUpdate": true,
-    "git.mergeEditor": true,
-    "window.commandCenter": true
+    "git.mergeEditor": false,
+    "window.commandCenter": true,
 }
