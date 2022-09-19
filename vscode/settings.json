@@ -96,15 +96,6 @@
     "terminal.integrated.tabs.enabled": true,
     "editor.minimap.enabled": false,
     "redhat.telemetry.enabled": false,
-    "terraform.languageServer": {
-        "external": true,
-        "pathToBinary": "",
-        "args": [
-            "serve"
-        ],
-        "maxNumberOfProblems": 100,
-        "trace.server": "off"
-    },
     "[go]": {
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
@@ -127,4 +118,6 @@
     "go.toolsManagement.autoUpdate": true,
     "git.mergeEditor": false,
     "window.commandCenter": true,
+    "terraform.languageServer.enable": true,
+    "terraform.languageServer.path": "",
 }

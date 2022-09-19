@@ -2,7 +2,7 @@
 [
     {
         "key": "shift+cmd+f",
-        "command": "filesExplorer.findInFolder"
+        "command": "filesExplorer.findInWorkspace"
     },
     {
         "key": "cmd+l",
@@ -114,6 +114,26 @@
     {
         "key": "alt+k",
         "command": "cursorUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "cursorMove",
+        "args": {
+            "by": "line",
+            "value": 5,
+            "to": "up"
+        },
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "cursorMove",
+        "args": {
+            "by": "line",
+            "value": 5,
+            "to": "down"
+        },
         "when": "textInputFocus"
     },
     {
