@@ -25,6 +25,8 @@ configure/vscode:
 
 configure/git: configure/gpg
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/.gitconfig $$HOME/.gitconfig
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/git/config.d $$HOME/.gitconfig.d
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/git/scripts $$HOME/.gitconfig.scripts
 .PHONY: configure/git
 
 configure/bash:
