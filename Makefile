@@ -17,7 +17,6 @@ configure/vscode:
 		golang.go \
 		hashicorp.terraform \
 		IBM.output-colorizer \
-		mongodb.mongodb-vscode \
 		redhat.vscode-yaml \
 		ryu1kn.partial-diff
 
@@ -34,7 +33,7 @@ configure/bash:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/bash/.profile.d $$HOME/.profile.d
 .PHONY: configure/bash
 
-configure/zsh:
+configure/zsh: configure/fonts
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc $$HOME/.zshrc
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc.d $$HOME/.zshrc.d
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zsh $$HOME/.zsh
@@ -43,6 +42,13 @@ configure/zsh:
 	curl -tlsv1.2 -o $$HOME/.zsh/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 .PHONY: configure/zsh
+
+configure/fonts:
+	@mkdir $$HOME/.fonts
+	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
+
+configure/zsh:
+	/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
 
 configure/fish:
 	@mkdir $$HOME/.fonts
