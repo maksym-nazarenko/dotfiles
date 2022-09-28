@@ -24,3 +24,7 @@ autoload -Uz compinit && compinit
 [ -d ~/.zshrc.d ] && source ~/.zshrc.d/*
 
 [ -r ~/.zshrc.local ] && source ~/.zshrc.local
+
+if [ -d "$HOME/Library/Python/3.9/bin" ]; then
+    PATH="$HOME/Library/Python/3.9/bin:$PATH"
+fi
