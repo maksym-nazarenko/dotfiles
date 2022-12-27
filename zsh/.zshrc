@@ -28,3 +28,7 @@ autoload -Uz compinit && compinit
 if [ -d "$HOME/Library/Python/3.9/bin" ]; then
     PATH="$HOME/Library/Python/3.9/bin:$PATH"
 fi
+
+if [ -d "$HOME/go/bin" ]; then
+    PATH="$PATH:$HOME/go/bin"
+fi
