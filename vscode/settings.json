@@ -22,7 +22,6 @@
     "partialDiff.enableTelemetry": false,
     "terminal.integrated.scrollback": 10000,
     "explorer.autoReveal": false,
-    "breadcrumbs.enabled": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.trimTrailingWhitespace": true,
@@ -120,4 +119,5 @@
     "window.commandCenter": true,
     "terraform.languageServer.enable": true,
     "terraform.languageServer.path": "",
+    "editor.rulers": [120]
 }

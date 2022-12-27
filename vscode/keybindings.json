@@ -117,7 +117,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+shift+k",
+        "key": "ctrl+alt+k",
         "command": "cursorMove",
         "args": {
             "by": "line",
@@ -127,7 +127,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+shift+j",
+        "key": "ctrl+alt+j",
         "command": "cursorMove",
         "args": {
             "by": "line",
