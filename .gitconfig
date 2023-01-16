@@ -10,10 +10,10 @@
 [alias]
   co   = checkout
   ds   = diff --staged
-  glog = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(green)%d%C(reset) %C(dim bold cyan) [%an,%aI] (via %cN,%cI)%C(reset)'
-  ls   = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(green)%d%C(reset)%C(dim bold cyan) [%cn,%cI]%C(reset)'
-  ll   = log --graph --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(green)%d%C(reset) %C(dim bold cyan)[%cn,%cI]%C(reset)' --numstat
-  dlog = log --decorate
+  clog = log --graph
+  glog = clog --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(28)%d%C(reset) %C(dim bold cyan) [%an,%aI] (via %cN)%C(reset)'
+  ls   = glog
+  ll   = glog --numstat
   st   = status -s -b
   rpo  = "!f(){ ~/.gitconfig.scripts/rpo.sh; }; f"
 
