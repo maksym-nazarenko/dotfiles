@@ -11,7 +11,7 @@
   co   = checkout
   ds   = diff --staged
   clog = log --graph
-  glog = clog --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(28)%d%C(reset) %C(dim bold cyan) [%an,%aI] (via %cN)%C(reset)'
+  glog = clog --pretty='format:%C(yellow)%h%C(reset) %C(white)%s%C(reset)%C(28)%d%C(reset)%C(dim bold cyan) [%an,%aI] (via %cN)%C(reset)'
   ls   = glog
   ll   = glog --numstat
   st   = status -s -b
