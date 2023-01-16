@@ -1,4 +1,5 @@
 Brewfile.lock.json
 zsh/.zsh/*
 
+.gitconfig.local
 !.gitkeep

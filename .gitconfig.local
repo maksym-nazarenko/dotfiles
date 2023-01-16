@@ -1,9 +1,0 @@
-[user]
-	email      = maks.nazarenko@gmail.com
-	signingKey = C71713AA64FA63FC
-
-[commit]
-	gpgsign = true
-
-[alias]
-	cof = "!f() { git co $(git branch --format='%(refname:short)' | fzf); }; f "
