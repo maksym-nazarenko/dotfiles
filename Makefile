@@ -19,7 +19,6 @@ configure/vscode:
 		IBM.output-colorizer \
 		redhat.vscode-yaml \
 		ryu1kn.partial-diff
-
 .PHONY: configure/vscode
 
 configure/git: configure/gpg
@@ -40,20 +39,14 @@ configure/zsh: configure/fonts
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 	curl -tlsv1.2 -o $$HOME/.zsh/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-
+	/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
 .PHONY: configure/zsh
 
 configure/fonts:
 	@mkdir $$HOME/.fonts
 	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
 
-configure/zsh:
-	/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
-
-configure/fish:
-	@mkdir $$HOME/.fonts
-	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
-
+configure/fish: configure/fonts
 	@mkdir -p $$HOME/.config/fish/conf.d
 	@git clone https://github.com/oh-my-fish/oh-my-fish $$HOME/.oh-my-fish
 	@$$HOME/.oh-my-fish/bin/install --offline
@@ -70,5 +63,5 @@ configure/gpg:
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/gpg/gpg-agent.conf $$HOME/.gnupg/gpg-agent.conf
 .PHONY: configure/gpg
 
-configure: configure/brew configure/bash configure/fish configure/git configure/vscode
+configure: configure/brew configure/git configure/bash configure/zsh configure/vscode
 .PHONY: configure

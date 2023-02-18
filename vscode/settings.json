@@ -119,5 +119,9 @@
     "window.commandCenter": true,
     "terraform.languageServer.enable": true,
     "terraform.languageServer.path": "",
-    "editor.rulers": [120]
+    "editor.rulers": [
+        120
+    ],
+    "window.confirmBeforeClose": "keyboardOnly",
+    "window.newWindowDimensions": "inherit"
 }

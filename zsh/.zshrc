@@ -25,10 +25,6 @@ autoload -Uz compinit && compinit
 
 [ -r ~/.zshrc.local ] && source ~/.zshrc.local
 
-if [ -d "$HOME/Library/Python/3.9/bin" ]; then
-    PATH="$HOME/Library/Python/3.9/bin:$PATH"
-fi
-
 if [ -d "$HOME/go/bin" ]; then
     PATH="$PATH:$HOME/go/bin"
 fi
