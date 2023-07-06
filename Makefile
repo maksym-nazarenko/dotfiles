@@ -21,6 +21,11 @@ configure/vscode:
 		ryu1kn.partial-diff
 .PHONY: configure/vscode
 
+configure/vim:
+	mkdir -p $$HOME/.config
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/vim/nvim $$HOME/.config/nvim
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/vim/vimrc $$HOME/.vimrc
+
 configure/git: configure/gpg
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/.gitconfig $$HOME/.gitconfig
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/git/config.d $$HOME/.gitconfig.d
@@ -54,8 +59,13 @@ configure/fish: configure/fonts
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/fish/maks.fish $$HOME/.config/fish/conf.d/maks.fish
 .PHONY: configure/fish
 
-configure/tmux:
+configure/powerline:
 	pip3 install --user powerline-status
+
+	mkdir -p $$HOME/.config/powerline
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/powerline/themes $$HOME/.config/powerline/themes
+
+configure/tmux: configure/powerline
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/tmux.conf $$HOME/.tmux.conf
 .PHONY: configure/tmux
 
