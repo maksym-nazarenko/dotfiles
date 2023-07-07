@@ -60,7 +60,7 @@ configure/fish: configure/fonts
 .PHONY: configure/fish
 
 configure/powerline:
-	pip3 install --user powerline-status
+	pip3 install --user powerline-status psutil
 
 	mkdir -p $$HOME/.config/powerline
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/powerline/themes $$HOME/.config/powerline/themes
