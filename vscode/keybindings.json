@@ -107,6 +107,10 @@
         "command": "workbench.view.explorer",
     },
     {
+        "key": "cmd+7",
+        "command": "outline.focus",
+    },
+    {
         "key": "cmd+9",
         "command": "workbench.view.scm",
         "when": "workbench.scm.active"
@@ -312,11 +316,6 @@
         "key": "shift+f6",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "cmd+7",
-        "command": "outline.focus",
-        "when": "editorTextFocus"
     },
     {
         "key": "cmd+-",
