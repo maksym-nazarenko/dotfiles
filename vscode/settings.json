@@ -74,7 +74,6 @@
     "go.formatTool": "goimports",
     "gitlens.codeLens.recentChange.enabled": true,
     "gitlens.codeLens.authors.enabled": true,
-    "gitlens.currentLine.enabled": false,
     "workbench.tree.indent": 16,
     "terminal.integrated.cwd": "${workspaceFolder}",
     "cSpell.userWords": [

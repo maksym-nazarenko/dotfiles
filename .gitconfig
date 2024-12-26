@@ -17,6 +17,8 @@
   st   = status -s -b
   rpo  = "!f(){ ~/.gitconfig.scripts/rpo.sh; }; f"
   pr   = "!f(){ git fetch $(git remote show) pull/$1/head:pr/$1 && git checkout pr/$1;}; f"
+  pocb = push -u origin HEAD
+  po = push origin HEAD
 
 [pull]
 	ff = only
