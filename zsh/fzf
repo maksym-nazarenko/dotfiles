@@ -1,0 +1,25 @@
+# Setup fzf
+# ---------
+# MacOS-only setup as Linux has fzf binary under /usr/bin
+if [[ ! "$PATH" == */fzf/bin* ]]; then
+  [ -d /usr/local/opt/fzf/bin ] && PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+if [[ $- == *i* ]]; then
+  # MacOS
+  [ -f "/usr/local/opt/fzf/shell/completion.zsh" ] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+  # Debian
+  [ -f "/usr/share/doc/fzf/examples/completion.zsh" ] && source "/usr/share/doc/fzf/examples/completion.zsh" 2> /dev/null
+fi
+
+# Key bindings
+# ------------
+
+# MacOS
+[ -f "/usr/local/opt/fzf/shell/key-bindings.zsh" ] && source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+# Debian
+[ -f "/usr/share/doc/fzf/examples/key-bindings.zsh" ] && source "/usr/share/doc/fzf/examples/key-bindings.zsh"

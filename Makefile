@@ -1,6 +1,6 @@
 
 ROOT_DIR := ${CURDIR}
-INSTALL_SYMLINK := ln -sf
+INSTALL_SYMLINK := ln -sfF
 
 
 configure/brew:
@@ -38,17 +38,17 @@ configure/bash:
 .PHONY: configure/bash
 
 configure/zsh: configure/fonts
-	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc $$HOME/.zshrc
-	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc.d $$HOME/.zshrc.d
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc.d $$HOME/
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/fzf $$HOME/.fzf.zsh
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zsh $$HOME/.zsh
+	$(INSTALL_SYMLINK) $(ROOT_DIR)/zsh/.zshrc $$HOME/.zshrc
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 	curl -tlsv1.2 -o $$HOME/.zsh/git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 	curl -tlsv1.2 -o $$HOME/.zsh/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-	/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
 .PHONY: configure/zsh
 
 configure/fonts:
-	@mkdir $$HOME/.fonts
+	@mkdir -p $$HOME/.fonts
 	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
 
 configure/powerline:
