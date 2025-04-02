@@ -47,7 +47,7 @@
   "Non-ASCII Anti Aliased" : true,
   "Sync Title" : true,
   "Disable Window Resizing" : true,
-  "Description" : "Default",
+  "Description" : "dev setup",
   "Close Sessions On End" : true,
   "Jobs to Ignore" : [
     "rlogin",
@@ -502,7 +502,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0
   },
-  "Name" : "Default",
+  "Name" : "dev",
   "Blinking Cursor" : true,
   "Guid" : "5384E274-832B-4630-9BD5-D923B6F7C640",
   "Idle Code" : 0,
