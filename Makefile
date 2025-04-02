@@ -25,6 +25,7 @@ configure/vim:
 	mkdir -p $$HOME/.config
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/vim/nvim $$HOME/.config/nvim
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/vim/vimrc $$HOME/.vimrc
+.PHONY: configure/vim
 
 configure/git: configure/gpg
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/.gitconfig $$HOME/.gitconfig
@@ -50,12 +51,14 @@ configure/zsh: configure/fonts
 configure/fonts:
 	@mkdir -p $$HOME/.fonts
 	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/.fonts/DroidSansMono_Powerline.otf
+.PHONY: configure/fonts
 
 configure/powerline:
 	pip3 install --user powerline-status psutil
 
 	mkdir -p $$HOME/.config/powerline
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/powerline/themes $$HOME/.config/powerline/themes
+.PHONY: configure/powerline
 
 configure/tmux: configure/powerline
 	$(INSTALL_SYMLINK) $(ROOT_DIR)/tmux.conf $$HOME/.tmux.conf
