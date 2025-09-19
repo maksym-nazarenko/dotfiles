@@ -1,0 +1,9 @@
+[user]
+    signingKey = ~/.ssh/id_rsa.pub
+
+[commit]
+    gpgSign = true
+
+[gpg]
+    format = ssh
+    sign = true

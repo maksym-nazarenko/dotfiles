@@ -1,0 +1,1 @@
+[ -d ~/.zshrc.local.d ] && for f in $(ls ~/.zshrc.local.d/*); do source "$f"; done

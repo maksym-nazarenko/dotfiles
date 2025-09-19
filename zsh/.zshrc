@@ -21,7 +21,7 @@ autoload -Uz compinit && compinit
 
 # /usr/bin/which -s aws_completer && complete -C $(which aws_completer) aws
 
-[ -d ~/.zshrc.d ] && source ~/.zshrc.d/*
+[ -d ~/.zshrc.d ] && for f in $(ls ~/.zshrc.d/*); do source "$f"; done
 
 [ -r ~/.zshrc.local ] && source ~/.zshrc.local
 

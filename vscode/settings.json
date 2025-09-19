@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "Droid Sans Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Droid Sans Mono For Powerline, Menlo, Monaco, 'Courier New', monospace",
     "files.insertFinalNewline": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.find.autoFindInSelection": "multiline",
@@ -123,5 +123,6 @@
         120
     ],
     "window.confirmBeforeClose": "keyboardOnly",
-    "window.newWindowDimensions": "inherit"
+    "window.newWindowDimensions": "inherit",
+    "zig.zls.enabled": "on"
 }

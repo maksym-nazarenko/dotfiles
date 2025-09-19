@@ -1,0 +1,1 @@
+export PATH="$PATH:$HOME/opt/zig-x86_64-macos-0.14.1/"

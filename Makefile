@@ -49,7 +49,7 @@ configure/zsh: configure/fonts
 .PHONY: configure/zsh
 
 configure/fonts:
-	@curl https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/Library/Fonts/DroidSansMono_Powerline.otf
+	@curl -L https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf -o $$HOME/Library/Fonts/DroidSansMono_Powerline.otf
 .PHONY: configure/fonts
 
 configure/powerline:
